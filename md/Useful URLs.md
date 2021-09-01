@@ -8,6 +8,12 @@
 * https://velog.io/   
 다양한 웹 관련 포스팅
 
+* https://studiomeal.com/blog   
+1분코딩!
+
+* https://flexboxfroggy.com/#ko
+Flexbox에 익숙해져보자
+
 ----------------------------------
 ## Design
 * https://material.io/design   

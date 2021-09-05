@@ -42,7 +42,8 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	padding: 0 2rem;   /* rem > 루트 요소(<html>)의 글꼴 크기를 1rem으로 지정한다 */
+	padding: 0 2rem; /* rem > 루트 요소(<html>)의 글꼴 크기를 1rem으로 지정한다 */
+	overflow: hidden;
 }
 
 .head-container {
@@ -79,7 +80,7 @@ section {
 	width: 100%;
 	height: 360px;
 	background-image: url('/WEB/FullStack_Part_2/ex1/img/mehdi-yef79KkAguA-unsplash.jpg');
-	background-repeat : no-repeat;
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	z-index: 1;
@@ -117,7 +118,7 @@ section {
 .skill-container {
 	width: 100%;
 	height: 100%;
-	margin: 0.5rem 0;
+	margin: 1rem 0;
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
@@ -131,7 +132,12 @@ section {
 	align-items: center;
 	justify-content: center;
 	border-radius: 9px;
-	box-shadow: 10px 10px 10px -5px rgba(25, 45, 70, 0.2);
+	box-shadow: 10px 10px 10px -5px rgba(25, 45, 70, 0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
+	transition: 0.5s;
+}
+
+.skill:hover {
+	transform: translate(0, -5px);
 }
 
 .skill-title {
@@ -161,7 +167,7 @@ section {
 
 .roadmap-container {
 	width: 100%;
-	margin-top: 1.0rem;
+	margin-top: 1rem;
 }
 
 .roadmap-title-container {
@@ -176,13 +182,90 @@ section {
 	font-weight: bold;
 }
 
-.slide-prev, .slide-next {
+.slide-prev,
+.slide-next {
 	font-size: 1.5rem;
 	cursor: pointer;
 }
 
 .slide-prev {
 	color: lightgray;
+}
+
+.arrow-container {
+}
+
+.class-list {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 0.5rem;
+	overflow: hidden;
+}
+
+li:hover {
+	cursor: pointer;
+}
+
+.class-card {
+	width: 240px; /* 카드 종류는 유동적인 크기보다 고정 된 것이 반응형일지라도 더 예쁘다*/
+	box-shadow: 10px 10px 10px -5px rgba(25, 45, 70, 0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
+	border-radius: 8px;
+	margin: 1rem 10px;
+	transition: 0.5s;
+}
+
+.class-card:hover {
+	box-shadow: 10px 10px 10px 0px rgba(25, 45, 70, 0.2);
+	transform: translate(0, -5px);
+	flex-shrink: 0; /* IE를 위한 속성 */
+}
+
+.class-image {
+	width: 100%;
+	height: 150px;
+	border-radius: 8px 8px 0 0; /* top-left 부터 시계방향*/
+}
+
+.class-container {
+	width: 100%;
+	padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.class-skill {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.9rem;
+}
+
+.class-desc {
+	width: 100%;
+	margin-top: 0.8rem;
+}
+
+.class-title {
+	font-weight: bold;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 0.4rem;
+}
+.class-detail {
+	font-size: 0.8rem;
+}
+
+footer {
+	margin-top: 2rem;
+	color: gray;
+	background-color: lightgray;
+	border-top: 1px solid gray;
+}
+
+.copyright {
+	margin: 1rem;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -192,16 +275,6 @@ section {
 }
 
 @media only screen and (max-width: 923px) {
-	.skill {
-	height: 100%;
-	background-color: #ffffff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 9px;
-	box-shadow: 10px 10px 10px -5px rgba(25, 45, 70, 0.2);
-	}
-	
 	.skill-title {
 		display: none;
 	}

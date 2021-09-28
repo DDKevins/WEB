@@ -1,11 +1,9 @@
 import './App.css';
+import MyComponent from './MyComponent';
 
 function App() {
-	const text = '안녕~';
 	return (
-		<div className="App">
-			<h1>{text}</h1>
-		</div>
+		<MyComponent name="React"/>
 	);
 }
 
